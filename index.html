@@ -8,7 +8,7 @@
 <body>
 
     <div id="app">
-        <ul>
+        <ul v-show="mails.length == 10">
             <li v-for="mail in mails"> {{mail.response}} </li>
         </ul>
     </div>
