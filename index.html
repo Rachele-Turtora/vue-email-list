@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Email list</title>
 </head>
 <body>
 
-    <div id="app">
-        <ul v-show="mails.length == 10">
-            <li v-for="mail in mails"> {{mail.response}} </li>
+    <div id="app" v-cloak>
+        <h2> {{title}} </h2>
+        <ul v-if="mails.length === num">
+            <li v-for="mail in mails"> {{mail}} </li>
         </ul>
+        <p v-else>Caricamento mails...</p>
     </div>
     
     <!-- Vue.js -->
